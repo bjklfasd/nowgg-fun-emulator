@@ -1,0 +1,144 @@
+    /* ---- YOUR EXACT STYLES (with minor additions) ---- */
+    body { font-family: "Parkinsans" !important; background: #111; color: white; text-align: center; font-weight: 600; font-style: normal; user-select: none; margin:0; }
+    h1,h2,h3,h4,h5,h6 { font-family: "Parkinsans" !important; }
+    img {
+      width: 150px; height: 150px; border-radius: 15px; transition: ease .2s;
+      border: 5px solid transparent;
+    }
+    img:hover {
+      scale: 1.2; transition: ease .2s; border: 5px solid #ffffff; cursor: pointer;
+    }
+    a { color: #67a1ff; transition: ease 0.2s; text-underline-offset: 10000px; }
+    a:hover { color: #59e282; transition: ease 0.2s; }
+
+    #header {
+      position: fixed; top: 6.5px; left: 50%; backdrop-filter: blur(3px);
+      background-color: rgba(29, 29, 29, 0.7); border: 0px solid #81bb92;
+      transform: translateX(-50%); transition: all ease-in 0.2s;
+      width: 50%; max-width: 1600px; display: flex; justify-content: space-between;
+      text-align: center; overflow: clip; color: white; padding: 16px 20px;
+      z-index: 9999; border-radius: 20px; box-sizing: border-box;
+    }
+    #header .right { height: 35px; display: flex; gap: 8px; align-items: center; }
+    .headericons {
+      width: 35px; height: 35px; border-radius: 15px; transition: ease .2s;
+      border: 5px solid transparent;
+    }
+    .headericons:hover { border: 5px solid transparent; }
+
+    button {
+      background-color: #1a1a1a44; width: 200px; height: 75px; outline: none;
+      border: solid 5px #3b3b3b3b; color: white; font-family: "Parkinsans", sans-serif;
+      font-size: 1.2em; border-radius: 15px; transition: all ease-in-out .2s;
+      backdrop-filter: blur(20px); cursor: pointer; margin: 10px;
+    }
+    button:hover {
+      background-color: #ececec; border: solid 5px #ffffff;
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+      color: black;
+    }
+    button:active { scale: 0.8; }
+
+    #vanta {
+      width: 100%; height: 100%; opacity: .5; position: fixed; top: 0; left: 0; z-index: 1;
+      pointer-events: none;
+    }
+    #content { z-index: 9998; position: relative; padding: 20px; }
+    #whereamifrom {
+      bottom: 0; z-index: 9998; position: fixed; text-align: center; display: grid;
+      font-family: "Parkinsans", sans-serif; transition: all ease-in 0.2s; left: 20px;
+    }
+    #whereamifrom img { transform: translateY(15px); }
+    #whereamifrom img:hover { scale: 1; transition: ease .2s; cursor: default; }
+    #buildinfo {
+      bottom: 0; right: 6.7px; z-index: 9998; position: fixed; text-align: center;
+      display: grid; font-family: "Parkinsans", sans-serif; transition: all ease-in 0.2s;
+    }
+    p { font-family: "Parkinsans", sans-serif !important; }
+
+    .rizzpopup {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.425); color: white; visibility: hidden;
+      display: flex; justify-content: center; align-items: center; backdrop-filter: blur(3px);
+      font-size: 2em; z-index: 9999; opacity: 0; transition: all 0.5s ease;
+      font-family: 'Clash Display Semibold';
+    }
+    #roddyrichesbox {
+      position: absolute; z-index: 9999; text-align: center; top: 50%; left: 49%;
+      transform: translate(-50%, -55%); border-radius: 35px; color: white;
+      padding: 30px; line-height: 1.8; overflow: clip; scrollbar-width: none;
+      -ms-overflow-style: none; border: 3px solid #00ff9d;
+      background-color: #3a3a3a67; backdrop-filter: blur(3px); padding: 20px;
+      border-radius: 10px; margin: 0 10px 10px;
+    }
+    #roddydihbar {
+      position: fixed; top: 0; left: 50%; width: 95%; transform: translateX(-50%);
+      display: flex; justify-content: space-between; text-align: center; overflow: clip;
+      color: white;
+    }
+    .smallbutton { width: 150px; height: 50px; font-size: 0.8em; }
+    input {
+      font-family: "Quicksand Bold", sans-serif; font-size: 1em; padding: 11px 2px;
+      margin: 6px; background-color: #080808; color: #fff; border: 3px solid #141414;
+      height: 50px; border-radius: 30px; cursor: auto; box-shadow: 0 4px 6px rgb(0,0,0,0.2);
+      z-index:9999; text-decoration-color: white; transition: all .2s ease-in-out;
+      overflow: visible; text-align: center; transform: scaleX(30px); scale: 0.7;
+      width: 400px;
+    }
+    input:hover { border: 3px solid #00ff9d; transition: all .2s ease-in-out; }
+    input:focus-visible {
+      border: 3px solid #00ff9d; transition: all .2s ease-in-out; outline: 0px;
+      box-shadow: 0 0 5px #00ff9d, 0 0 15px #00ff9d, 0 0 25px #00ff9d; width: 400px;
+    }
+
+    /* ---- NEW: video modal overlay ---- */
+    #video-modal {
+      position: fixed; top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.85); backdrop-filter: blur(6px);
+      display: none; justify-content: center; align-items: center;
+      z-index: 10000; flex-direction: column;
+    }
+    #video-modal.active { display: flex; }
+    #video-modal video {
+      max-width: 90%; max-height: 80vh; border-radius: 24px;
+      box-shadow: 0 0 40px rgba(0,255,157,0.3);
+      border: 2px solid #00ff9d;
+      background: #000;
+    }
+    #close-video {
+      margin-top: 30px; background: #222; border: 2px solid #ff4466;
+      color: white; padding: 14px 40px; border-radius: 60px;
+      font-size: 1.4rem; font-weight: bold; cursor: pointer;
+      transition: 0.2s; letter-spacing: 1px;
+    }
+    #close-video:hover { background: #ff4466; color: #000; box-shadow: 0 0 20px #ff4466; }
+
+    /* button grid (replaces images) */
+    .game-grid {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+      max-width: 1200px; margin: 20px auto;
+    }
+    .game-btn {
+      background: #1f1f1f; border: 3px solid #3b3b3b;
+      border-radius: 20px; padding: 10px 20px;
+      color: white; font-family: "Parkinsans", sans-serif;
+      font-weight: 600; font-size: 1.1rem;
+      cursor: pointer; transition: 0.2s;
+      min-width: 140px; height: 70px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 10px rgba(0,255,157,0.1);
+      display: inline-flex; align-items: center; justify-content: center;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .game-btn:hover {
+      background: #2e2e2e; border-color: #00ff9d;
+      box-shadow: 0 0 20px #00ff9d55; transform: scale(1.05);
+      color: #fff;
+    }
+    .game-btn:active { scale: 0.95; }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      #header { width: 90%; flex-wrap: wrap; justify-content: center; gap: 10px; }
+      .game-btn { min-width: 100px; height: 60px; font-size: 0.9rem; }
+    }
